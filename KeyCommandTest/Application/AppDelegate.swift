@@ -95,11 +95,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             To check if the builder is for a contextual menu, check for: UIMenuSystem.context.
          */
         if builder.system == .main {
-            print("adsadasdasdadasdasd")
             menuController = MenuController(with: builder)
-            
-            // Start off with just plain font style.
-//            fontMenuStyleStates.insert(MenuController.FontStyle.plain.rawValue)
+
         }
     }
 

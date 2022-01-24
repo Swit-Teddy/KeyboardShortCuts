@@ -13,6 +13,9 @@
 		A89CA279279916CD001A0F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A89CA278279916CD001A0F8F /* Assets.xcassets */; };
 		A89CA27C279916CD001A0F8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A89CA27A279916CD001A0F8F /* LaunchScreen.storyboard */; };
 		A89CA284279953B5001A0F8F /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CA283279953B5001A0F8F /* MenuController.swift */; };
+		A89CA28C279A507D001A0F8F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CA28B279A507D001A0F8F /* SecondViewController.swift */; };
+		A8E943C8279A8619007F93DC /* DifferTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E943C7279A8619007F93DC /* DifferTableViewController.swift */; };
+		A8E943CA279A8AF5007F93DC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E943C9279A8AF5007F93DC /* TableViewCell.swift */; };
 		C02C624894E7B2EC915BE7D1 /* Pods_KeyCommandTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A7A842DEB0130401D193B73 /* Pods_KeyCommandTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +30,9 @@
 		A89CA27B279916CD001A0F8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A89CA27D279916CD001A0F8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A89CA283279953B5001A0F8F /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		A89CA28B279A507D001A0F8F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		A8E943C7279A8619007F93DC /* DifferTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferTableViewController.swift; sourceTree = "<group>"; };
+		A8E943C9279A8AF5007F93DC /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		CAF474035E03250791C0874C /* Pods-KeyCommandTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyCommandTest.debug.xcconfig"; path = "Target Support Files/Pods-KeyCommandTest/Pods-KeyCommandTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,15 +69,98 @@
 		A89CA26E279916CB001A0F8F /* KeyCommandTest */ = {
 			isa = PBXGroup;
 			children = (
-				A89CA26F279916CB001A0F8F /* AppDelegate.swift */,
-				A89CA271279916CB001A0F8F /* SceneDelegate.swift */,
-				A89CA283279953B5001A0F8F /* MenuController.swift */,
-				A89CA273279916CB001A0F8F /* ViewController.swift */,
-				A89CA278279916CD001A0F8F /* Assets.xcassets */,
-				A89CA27A279916CD001A0F8F /* LaunchScreen.storyboard */,
+				A8E943C3279A85CE007F93DC /* DifferPrx */,
+				A89CA285279A5013001A0F8F /* Application */,
+				A89CA286279A5026001A0F8F /* Resource */,
+				A89CA287279A5038001A0F8F /* Source */,
 				A89CA27D279916CD001A0F8F /* Info.plist */,
 			);
 			path = KeyCommandTest;
+			sourceTree = "<group>";
+		};
+		A89CA285279A5013001A0F8F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A89CA26F279916CB001A0F8F /* AppDelegate.swift */,
+				A89CA271279916CB001A0F8F /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A89CA286279A5026001A0F8F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A89CA278279916CD001A0F8F /* Assets.xcassets */,
+				A89CA27A279916CD001A0F8F /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		A89CA287279A5038001A0F8F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				A89CA288279A5040001A0F8F /* Scene */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		A89CA288279A5040001A0F8F /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				A89CA28A279A5055001A0F8F /* Second */,
+				A89CA289279A504B001A0F8F /* Home */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		A89CA289279A504B001A0F8F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A89CA283279953B5001A0F8F /* MenuController.swift */,
+				A89CA273279916CB001A0F8F /* ViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A89CA28A279A5055001A0F8F /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				A89CA28B279A507D001A0F8F /* SecondViewController.swift */,
+			);
+			path = Second;
+			sourceTree = "<group>";
+		};
+		A8E943C3279A85CE007F93DC /* DifferPrx */ = {
+			isa = PBXGroup;
+			children = (
+				A8E943C4279A85D9007F93DC /* Source */,
+			);
+			path = DifferPrx;
+			sourceTree = "<group>";
+		};
+		A8E943C4279A85D9007F93DC /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				A8E943C5279A85E2007F93DC /* Scene */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		A8E943C5279A85E2007F93DC /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				A8E943C6279A85EF007F93DC /* Home */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		A8E943C6279A85EF007F93DC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A8E943C7279A8619007F93DC /* DifferTableViewController.swift */,
+				A8E943C9279A8AF5007F93DC /* TableViewCell.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		BC1F6D41081ED5FF237A0B74 /* Frameworks */ = {
@@ -208,6 +297,9 @@
 				A89CA284279953B5001A0F8F /* MenuController.swift in Sources */,
 				A89CA274279916CB001A0F8F /* ViewController.swift in Sources */,
 				A89CA270279916CB001A0F8F /* AppDelegate.swift in Sources */,
+				A8E943C8279A8619007F93DC /* DifferTableViewController.swift in Sources */,
+				A89CA28C279A507D001A0F8F /* SecondViewController.swift in Sources */,
+				A8E943CA279A8AF5007F93DC /* TableViewCell.swift in Sources */,
 				A89CA272279916CB001A0F8F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

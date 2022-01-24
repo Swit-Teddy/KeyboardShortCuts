@@ -16,8 +16,10 @@ class MenuController {
         builder.insertSibling(MenuController.navigationMenu(), beforeMenu: .window)
         
         builder.insertChild(MenuController.openMenu(), atEndOfMenu: .citiesMenu)
+        
     }
     
+    // 단축키 입력했을때 전달할 Property identifier
     struct CommandPListKeys {
         static let ArrowsKeyIdentifier = "id" // Arrow command-keys
         static let CitiesKeyIdentifier = "city" // City command-keys
@@ -26,6 +28,7 @@ class MenuController {
         static let ToolsIdentifierKey = "tool" // Tool commands
     }
     
+    // keyboard 방향키 ㅋㅅㅋ
     enum Arrows: String, CaseIterable {
         case rightArrow
         case leftArrow
@@ -56,6 +59,7 @@ class MenuController {
         // Create the Cities menu group.
         let cities = ["a","b","c","d","e"]
         
+        
         let cityChildrenCommands = zip(cities, 0...).map { (city, index) in
             UIKeyCommand(title: city,
                          image: nil,
@@ -64,6 +68,11 @@ class MenuController {
                          modifierFlags: .command,
                          propertyList: ["city": city])
         }
+        
+        cityChildrenCommands.forEach { command in
+            command.wantsPriorityOverSystemBehavior = true
+        }
+        
         let citiesMenuGroup = UIMenu(title: "",
                                      image: nil,
                                      identifier: .citiesGroupMenu,
@@ -130,8 +139,18 @@ class MenuController {
                       options: [],
                       children: [switMenuGroup])
     }
+    
+    @objc func makeCommands(datas: [String], action: Selector) -> [UIKeyCommand]{
+        
+        
+        return []
+    }
 }
 
+
+extension MenuController{
+    
+}
 
 extension UIMenu.Identifier {
     static var newMenu: UIMenu.Identifier { UIMenu.Identifier("com.example.apple-samplecode.menus.newMenu") }

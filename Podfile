@@ -9,4 +9,6 @@ target 'KeyCommandTest' do
   pod 'FlexLayout'
   pod 'PinLayout' 
   pod 'Then'
+  pod 'SnapKit', '~> 5.0.0'
+  pod 'Differ'
 end

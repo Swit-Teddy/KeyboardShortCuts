@@ -17,10 +17,6 @@ class ViewController: UIViewController {
         self.view.backgroundColor = .white
     }
     
-    
     //MARK: - Functions
-    @objc static func commandTest(_ sender: AnyObject){
-        print("called commad Test")
-    }
 }
 
